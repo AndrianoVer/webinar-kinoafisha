@@ -1,0 +1,114 @@
+.movies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        & > h1 {
+            padding: 5px 0;
+            margin: 0 0 5px;
+            font-size: 16px;
+            color: var(--color-14);
+            font-weight: 300;
+            border-radius: 5px 5px 0 0;
+        }
+
+        & img {
+            width: 100%;
+            min-width: 250px;
+            box-shadow: var(--box-shadow);
+            transition: box-shadow 0.3s ease;
+        }
+
+        & footer {
+            display: flex;
+            flex-grow: 1;
+            position: relative;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: -100px;
+                right: 0;
+                height: 100px;
+                background: linear-gradient(
+                    to top,
+                    black,
+                    #00001111,
+                    transparent
+                );
+            }
+
+            & code {
+                position: absolute;
+                font-family: inherit;
+                top: -50px;
+                left: 0;
+                right: 0;
+                font-size: 30px;
+                font-weight: 600;
+                z-index: 10;
+                text-shadow: 2px 2px 2px #000000;
+            }
+
+            & h1 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 0;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    @media (--phonePortrait), (--phoneLandscape) {
+        justify-content: space-around;
+        gap: 10px 5px;
+
+        & article {
+            width: 130px;
+            margin-right: 0;
+            margin-bottom: 40px;
+            margin-bottom: 5px;
+
+            & h1 {
+                font-size: 14px;
+            }
+
+            & img {
+                min-width: 130px;
+            }
+
+            & footer {
+                & code {
+                    top: -40px;
+                    font-size: 24px;
+                }
+
+                & h1 {
+                    padding: 3px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

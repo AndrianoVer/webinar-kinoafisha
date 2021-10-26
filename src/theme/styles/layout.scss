@@ -1,0 +1,42 @@
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--main-width);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--main-padding);
+    --outline: unset;
+
+    & svg.logo {
+        width: 310px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        transition: filter 0.3s ease;
+
+        &:hover {
+            filter: brightness(0.6) sepia(1) hue-rotate(-10deg) saturate(5);
+        }
+
+        & + a {
+            display: block;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: color 0.1s ease;
+
+            &:hover {
+                color: var(--color-9);
+            }
+        }
+
+        @media (--phonePortrait), (--phoneLandscape) {
+            width: 230px;
+            margin: 0 auto 30px;
+        }
+    }
+
+    @media (--phonePortrait), (--phoneLandscape) {
+        padding: 20px 10px;
+    }
+}

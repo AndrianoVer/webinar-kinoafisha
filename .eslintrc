@@ -1,0 +1,17 @@
+{
+    "parser": "@babel/eslint-parser",
+    "extends": [
+        "@sotream/eslint-config-react-js"
+    ],
+    "rules": {
+        "no-void": "off",
+        "no-unused-vars": "warn",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ]
+    }
+}

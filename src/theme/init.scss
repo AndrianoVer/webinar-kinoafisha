@@ -1,0 +1,13 @@
+/* Core */
+@import '~sanitize.css';
+
+/* Instruments */
+@import './vars.scss';
+@import './global.scss';
+
+/* Components */
+@import './welcome.scss';
+@import './styles/layout.scss';
+@import './styles/header.scss';
+@import './styles/movies.scss';
+@import './styles/movie-view.scss';
